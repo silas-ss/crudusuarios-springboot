@@ -1,0 +1,7 @@
+<form method="post" action="/usuarios/atualizar">
+Nome: <input type="text" name="nome" id="nome" th:value="${usuario.nome}" /><br/>
+E-mail: <input type="text" name="email" id="email" th:value="${usuario.email}" /><br/>
+Senha: <input type="password" name="senha" id="senha" th:value="${usuario.senha}" /><br/>
+<input type="hidden" name="usuario_id" th:value="${usuario.id}" />
+<button type="submit" name="submit">Salvar</button>
+</form>

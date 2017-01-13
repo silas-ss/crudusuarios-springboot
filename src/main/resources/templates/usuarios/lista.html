@@ -1,0 +1,30 @@
+<a href="/usuarios/novo">Adicionar</a>
+
+<table border="1">
+	<thead>
+		<tr>
+			<th>#</th>
+			<th>Nome</th>
+			<th>E-mail</th>
+			<th>Senha</th>
+			<th>Ações</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr data-th-each="usuario : ${usuarios}">
+			<td data-th-text="${usuario.id}"></td>
+			<td data-th-text="${usuario.nome}"></td>
+			<td data-th-text="${usuario.email}"></td>
+			<td data-th-text="${usuario.senha}"></td>
+			<td>
+				<a th:href="@{'/usuarios/{id}/editar' (id=${usuario.id})}">
+					Editar
+				</a>
+				
+				<a th:href="@{'/usuarios/{id}/excluir' (id=${usuario.id})}">
+					Excluir
+				</a>
+			</td>
+		</tr>		
+	</tbody>
+</table>
